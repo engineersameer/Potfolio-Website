@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  background-color: #000;
+  height: 100%;
+  margin: 0;
+  background: transparent; /* or none */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section scroll offset to position headers in center of viewport */
+div[id] {
+  scroll-margin-top: 0;
+}
