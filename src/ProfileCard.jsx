@@ -22,7 +22,7 @@ const socialLinks = {
 function ProfileCard({ name, role, description }) {
   return (
     <motion.div
-      className="bg-white rounded-xl shadow-2xl p-8 max-w-md mx-4 mb-8 hover:shadow-3xl transition-shadow duration-300"
+      className="bg-white dark:bg-gray-900 rounded-xl shadow-2xl p-8 max-w-md mx-4 mb-8 hover:shadow-3xl transition-shadow duration-300"
       variants={cardVariants}
       initial="hidden"
       animate="visible"
@@ -32,19 +32,19 @@ function ProfileCard({ name, role, description }) {
         <img
           src={`https://api.dicebear.com/6.x/initials/svg?seed=${name}`}
           alt={name}
-          className="w-32 h-32 rounded-full mb-6 border-4 border-indigo-600"
+          className="w-32 h-32 rounded-full mb-6 border-4 border-indigo-600 dark:border-yellow-300"
         />
         
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">{name}</h2>
-        <h3 className="text-xl text-indigo-600 font-medium mb-4">{role}</h3>
-        <p className="text-gray-600 mb-6">{description}</p>
+        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 transition-colors">{name}</h2>
+        <h3 className="text-xl text-indigo-600 dark:text-yellow-300 font-medium mb-4 transition-colors">{role}</h3>
+        <p className="text-gray-600 dark:text-gray-400 mb-6 transition-colors">{description}</p>
 
         <div className="flex space-x-4">
           <a
             href={socialLinks.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+            className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-yellow-300 transition-colors duration-300"
           >
             <FaGithub size={24} />
           </a>
@@ -52,7 +52,7 @@ function ProfileCard({ name, role, description }) {
             href={socialLinks.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+            className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-yellow-300 transition-colors duration-300"
           >
             <FaLinkedin size={24} />
           </a>
@@ -60,7 +60,7 @@ function ProfileCard({ name, role, description }) {
             href={socialLinks.twitter}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+            className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-yellow-300 transition-colors duration-300"
           >
             <FaTwitter size={24} />
           </a>
@@ -68,7 +68,7 @@ function ProfileCard({ name, role, description }) {
             href={socialLinks.leetcode}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+            className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-yellow-300 transition-colors duration-300"
           >
             <SiLeetcode size={24} />
           </a>
@@ -76,7 +76,7 @@ function ProfileCard({ name, role, description }) {
             href={socialLinks.hackerrank}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+            className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-yellow-300 transition-colors duration-300"
           >
             <SiHackerrank size={24} />
           </a>
