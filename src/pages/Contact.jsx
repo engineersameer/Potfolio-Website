@@ -11,7 +11,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="border-b-4 border-indigo-500 dark:border-yellow-300 pb-2">Contact Me</span>
+          <span className="border-b-4 border-indigo-500 dark:border-yellow-300 pb-2">Contact me</span>
         </motion.h2>
         <div className="max-w-2xl mx-auto bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg transition-colors">
           <form className="space-y-6">
