@@ -7,15 +7,7 @@ export default function Contact() {
       <div className="absolute top-0 left-0 w-full h-32 bg-light-gray dark:bg-[#16191d]" style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 85%)' }}></div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <motion.h2
-          className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white transition-colors"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <span className="border-b-4 border-turquoise pb-2">Contact Me</span>
-        </motion.h2>
+        
         <div className="max-w-2xl mx-auto bg-white/80 dark:bg-dark-base/50 border border-turquoise/20 p-8 rounded-xl shadow-lg transition-colors">
           <form className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
