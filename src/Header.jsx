@@ -48,10 +48,9 @@ export default function Header({ dark, setDark }) {
     <>
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-          ${scrolled ? 'shadow-lg shadow-black/10 dark:shadow-black/30' : ''}
+          ${scrolled ? 'shadow-lg shadow-black/10 dark:shadow-black/30 border-b border-gray-200 dark:border-turquoise/30' : ''}
           bg-white/90 dark:bg-dark-base/95 backdrop-blur-sm
         `}
-        style={{ clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)' }}
       >
         <nav className="container mx-auto flex items-center justify-between px-6 py-4 md:py-5 relative">
         {/* Logo */}
@@ -151,57 +150,6 @@ export default function Header({ dark, setDark }) {
         )}
       </AnimatePresence>
     </header>
-    {/* Border overlay that follows the header's angled bottom edge */}
-    {scrolled && !dark && (
-      <div 
-        className="fixed top-0 left-0 w-full pointer-events-none z-[51]"
-        style={{ 
-          height: '100px',
-          clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)',
-        }}
-      >
-        <svg 
-          className="absolute inset-0 w-full h-full"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          style={{ overflow: 'visible' }}
-        >
-          <line 
-            x1="0" 
-            y1="100" 
-            x2="100" 
-            y2="85" 
-            stroke="#e5e7eb" 
-            strokeWidth="0.5"
-          />
-        </svg>
-      </div>
-    )}
-    {scrolled && dark && (
-      <div 
-        className="fixed top-0 left-0 w-full pointer-events-none z-[51]"
-        style={{ 
-          height: '100px',
-          clipPath: 'polygon(0 0, 100% 0, 100% 85%, 0 100%)',
-        }}
-      >
-        <svg 
-          className="absolute inset-0 w-full h-full"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-          style={{ overflow: 'visible' }}
-        >
-          <line 
-            x1="0" 
-            y1="100" 
-            x2="100" 
-            y2="85" 
-            stroke="rgba(61, 207, 211, 0.3)" 
-            strokeWidth="0.5"
-          />
-        </svg>
-      </div>
-    )}
     </>
   );
 }
